@@ -41,9 +41,9 @@ function Header() {
       <Container>
         <nav className='flex'>
           <div className='mr-4 w-[100px] h-[100px]'>
-            <link to="/">
+            <Link to="/">
               <Logo/>
-            </link>
+            </Link>
           </div>
           <ul className='flex m-auto list-none'>
             {navItems.map((item)=>(
