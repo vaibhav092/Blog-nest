@@ -15,7 +15,7 @@ export class AuthService{
             const userAcc=await this.account.create(ID.unique(),email,password,name)
             if (userAcc) {
                 // return userAcc
-                this.login({email,password})
+                return this.login({email,password})
             } else {
                 return userAcc
             }
@@ -32,7 +32,7 @@ export class AuthService{
     }
     async getCurrentUser(){
         try {
-            await this.account.get()
+            return await this.account.get()
         } catch (error) {
             throw error
         }
